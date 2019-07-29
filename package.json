@@ -1,0 +1,64 @@
+{
+  "contributors": [
+    {
+      "name": "Jan Bialostok",
+      "email": "janbialostok@gmail.com"
+    },
+    {
+      "name": "Mark Waldron",
+      "email": "markewaldron@gmail.com"
+    },
+    {
+      "name": "Iris Dan",
+      "email": "yjdan92@gmail.com"
+    },
+    {
+      "name": "Cody Hahn",
+      "email": "codhah92@gmail.com"
+    }
+  ],
+  "author": "DigiFi",
+  "bugs": {
+    "url": "https://github.com/digifi-io/credit-process/issues"
+  },
+  "dependencies": {
+    "@digifi-los/assignments": "^0.0.1",
+    "@digifi-los/calculations": "^0.0.1",
+    "@digifi-los/comparison": "^0.0.2",
+    "@digifi-los/data-integrations-strategy": "^0.0.1",
+    "@digifi-los/ml": "^0.0.1",
+    "@digifi-los/output": "^0.0.1",
+    "@digifi-los/requirements": "^0.0.1",
+    "@digifi-los/scorecard": "^0.0.1",
+    "@digifi-los/segmentloader": "^0.0.1",
+    "numeric": "~1.2.6",
+    "promisie": "^1.6.1",
+    "sinon": "^6.0.0",
+    "sinon-chai": "^3.2.0",
+    "string-to-json": "^0.1.0"
+  },
+  "description": "Dynamic credit pipeline creator for DigiFi DecisionVision Platform",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-spies": "^1.0.0",
+    "fs-extra": "^0.30.0",
+    "mocha": "^2.4.4",
+    "periodicjs": "^10.9.31"
+  },
+  "homepage": "https://github.com/digifi-io/credit-process#readme",
+  "keywords": [],
+  "main": "index.js",
+  "name": "@digifi-los/credit-process",
+  "optionalDependencies": {},
+  "readme": "\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/digifi-io/credit-process.git"
+  },
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "export NODE_ENV=test && mocha -R spec --recursive"
+  },
+  "version": "0.0.1"
+}
