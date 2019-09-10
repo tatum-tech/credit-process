@@ -28,7 +28,7 @@
     "@digifi-los/data-integrations-strategy": "^0.0.4",
     "@digifi-los/ml": "^0.0.1",
     "@digifi-los/output": "^0.0.1",
-    "@digifi-los/requirements": "^0.0.1",
+    "@digifi-los/requirements": "^0.0.2",
     "@digifi-los/scorecard": "^0.0.1",
     "@digifi-los/segmentloader": "^0.0.1",
     "numeric": "~1.2.6",
@@ -60,5 +60,5 @@
     "start": "node ./index.js",
     "test": "export NODE_ENV=test && mocha -R spec --recursive"
   },
-  "version": "0.0.4"
+  "version": "0.0.5"
 }
