@@ -60,5 +60,5 @@
     "start": "node ./index.js",
     "test": "export NODE_ENV=test && mocha -R spec --recursive"
   },
-  "version": "0.0.5"
+  "version": "0.0.6"
 }
