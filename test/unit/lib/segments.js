@@ -44,7 +44,7 @@ describe('Lib/Segments', function () {
         else return segmentArr[ 1 ];
       }
       let skip_evaluator = function () { return false; };
-      let segmentEvaluatorCreator = segments.createSegmentEvaluator(segmentFunc, skip_evaluator, 'scorecard');
+      let segmentEvaluatorCreator = segments.createSegmentEvaluator(segmentFunc, skip_evaluator, 'scorecard', 'module_name');
       let result = segmentEvaluatorCreator({ act: 31 });
       expect(result).to.have.property('scorecard');
       expect(result.scorecard).to.have.property('ACT scorecard');
@@ -57,7 +57,7 @@ describe('Lib/Segments', function () {
       }
       let skip_evaluator = false;
       let _state = { sat: 2100 };
-      let segmentEvaluatorCreator = segments.createSegmentEvaluator(segmentFunc, skip_evaluator, 'scorecard');
+      let segmentEvaluatorCreator = segments.createSegmentEvaluator(segmentFunc, skip_evaluator, 'scorecard', 'module_name');
       let result = segmentEvaluatorCreator({ sat: 2100 })
       expect(result).to.deep.equal(_state);
     });
@@ -68,7 +68,7 @@ describe('Lib/Segments', function () {
       }
       let skip_evaluator = false;
       let _state = { sat: 2100 };
-      let segmentEvaluatorCreator = segments.createSegmentEvaluator(segmentFunc, skip_evaluator, 'scorecard');
+      let segmentEvaluatorCreator = segments.createSegmentEvaluator(segmentFunc, skip_evaluator, 'scorecard', 'module_name');
       let result = segmentEvaluatorCreator({ sat: 2100 }, true)
       expect(result).to.be.a('function');
     });
@@ -77,11 +77,11 @@ describe('Lib/Segments', function () {
         let segmentFunc = null;
         let skip_evaluator = false;
         let _state = { sat: 2100 };
-        let segmentEvaluatorCreator = segments.createSegmentEvaluator(segmentFunc, skip_evaluator, 'scorecard');
+        let segmentEvaluatorCreator = segments.createSegmentEvaluator(segmentFunc, skip_evaluator, 'scorecard', 'module_name');
         let result = await segmentEvaluatorCreator({ sat: 2100 }, true);
       } catch (e) {
-        expect(e).to.be.instanceOf(Error);
-        expect(e.message).to.equal('segments is not a function');
+        expect(e).to.be.an('object');
+        expect(e.message).to.equal('Error while creating segment evaluator - scorecard module module_name: segments is not a function');
       }
     });
   });
