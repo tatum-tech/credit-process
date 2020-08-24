@@ -25,7 +25,7 @@
     "@digifi-los/assignments": "^0.0.1",
     "@digifi-los/calculations": "^0.0.1",
     "@digifi-los/comparison": "^0.0.2",
-    "@digifi-los/data-integrations-strategy": "^0.0.12",
+    "@digifi-los/data-integrations-strategy": "github:tatum-tech/data-integrations-strategy#useLocally",
     "@digifi-los/ml": "^0.0.1",
     "@digifi-los/output": "^0.0.1",
     "@digifi-los/requirements": "^0.0.3",
