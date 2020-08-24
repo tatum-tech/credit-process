@@ -60,5 +60,8 @@
     "start": "node ./index.js",
     "test": "export NODE_ENV=test && mocha -R spec --recursive"
   },
+  "precommit": [
+    "build"
+  ],
   "version": "0.1.7"
 }
