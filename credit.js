@@ -46,6 +46,7 @@ var load_pipeline = function (engine) {
         if (_pipeline) {
           return _pipeline(state)
             .then(result => {
+              console.log('RESULT!!!', result)
               let output_variables = Object.assign({}, result.calculated_variables, result.output_variables, result.scorecard_variables, result.assignment_variables, result.artificialintelligence_variables, result.dataintegration_variables);
               let output_keys = Object.keys(output_variables);
               output_keys.forEach(key => {
